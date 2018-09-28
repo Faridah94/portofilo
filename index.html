@@ -180,7 +180,7 @@ transform: rotate(50deg);
 }
 
 .progress h3{
-display:none;         * languages section style */
+display:none;         /* languages section style */
 }
 .progress:after{  
     content:'';
@@ -267,9 +267,11 @@ margin:5%;
 
 @media screen and (max-width: 428px) { 
 #left{
-height:100%;
-padding-bottom:1350px;
-
+width:35%;
+max-width:35%;            /* left div */
+height:50%;
+padding-top:180px;
+padding-bottom:120%;
 }
 #right{
 height:100%;
@@ -374,8 +376,11 @@ width:23%;
 height:23%;
 margin:5%;
 }
+.clearfix:after{
+content:""
+clear:both;
 }
-
+}
 </style>
 </head>
 
@@ -388,7 +393,7 @@ margin:5%;
 <hr><br><br>
 <span>F/A</span>
 </div>
-
+    
 <div id="right" class="clearfix">
 <h2>Contact</h2>
 <hr>
@@ -402,6 +407,7 @@ margin:5%;
 <h3>Facebook</h3>
 <span>www.facebook.com/faridah.absi</span>
 </div><br><br>
+
 <h2>Profile</h2>
 <!--**************************************************************************************-->
 <hr>
@@ -453,6 +459,7 @@ margin:5%;
 <P>A site specializing in flowers weddings.
 </P>
 </div>
+    
 <!--**************************************************************************************-->
 
 <div id="SandE">
@@ -538,5 +545,6 @@ Spanish :<div class="progress2"></div>
 </div>
 
 </div>
+    
 </body>
 </html>
