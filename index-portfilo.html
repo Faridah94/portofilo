@@ -1,0 +1,542 @@
+<!doctype html>
+<html>
+<!--*********************************-->
+<head>
+<meta charset="utf-8">
+<title>Portfilo</title>
+<link type="text/css" rel="stylesheet" href="Style-homeWork.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Laila');
+
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
+.wrapper{
+width:80%;
+margin:0 auto;
+text-align:center;
+background-color:#F2E2E3;
+font-family: 'Laila', serif;
+font-size:1.2vw;
+display: flex; /* equal height of the children */
+
+}
+
+#left{
+float:left;
+background-color:#F2E2E3;
+width:35%;
+max-width:35%;            /* left div */
+height:100%;
+padding-top:190px;
+padding-bottom:158%;
+flex: 1; /* additionally, equal width */
+
+}
+
+#left h1{
+margin-bottom:20%;
+}
+
+#left span{
+border-radius:50px;
+border:1px solid black;
+color:white;
+padding:20px;
+background-color:black;
+font-size:2em;
+color:#F2E2E3;
+
+}
+
+#right{
+float:left;
+width:65%;
+max-width:65%;
+height:100%;                        /* right div */
+background-color:#FEFCFD;
+padding:20px; 
+text-align:start;
+flex: 1; /* additionally, equal width */
+
+}
+
+.clearfix{
+content:""
+clear:both;
+}
+
+#contact{
+column-count:2;      /* contact section style */
+padding:15px 0;
+}
+
+#contact:nth-child(odd){
+line-height:35px;          /* contact section style */
+}
+
+#profile{
+width:85%;             /* contact section style */
+max-width:85%; 
+
+}
+
+#education{
+column-count:1;
+}
+
+#Social_media{
+column-count:2;     /* Social_media section style */
+text-align:center;
+}
+
+#Social_media img{
+width:10%;
+height:10%;         /* Social_media section style */
+margin:5%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;          /* profissional-skills section style */
+    border-radius: 50%;
+    display: inline-block;
+    text-align:justify;
+    
+}
+.dot1 {
+    height: 15px;
+    width: 15px;
+    background-color: #F2E2E3;    /* profissional-skills section style */
+    border-radius: 50%;
+    display: inline-block;
+	    text-align:justify;
+
+}
+
+#skills{
+width:100%;
+}
+
+#M-M{
+display:none;
+
+}
+#expertise{
+width:100%;
+text-align:center; 
+}
+
+#expertise h2{
+text-align:start;
+}
+
+#circle{
+text-align:center; 
+line-height:85px;
+display:inline-block;
+font-size:15px;
+margin-left:15px;
+
+}
+
+#circle, #circle .slice {
+  border-color: lightgray;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 7px;           /* personal-skills section style */
+  box-sizing: border-box;
+  height: 100px;
+  position: relative;
+  width: 100px;
+}
+
+#circle .slice {
+  -webkit-clip-path: inset(0 20px 70px 20px);   /* personal-skills section style */
+  /*content: ''; EDIT: not needed */
+  left: -7px;
+  position: absolute;
+  top: -7px;
+}
+
+#circle .slice:nth-child(1) {
+border-color:#F2E2E3;           /* personal-skills section style */
+transform: rotate(50deg);
+}
+
+.progress,.progress2,.progress1{
+    width:150px;
+    height:20px;               /* languages section style */
+    border:1px solid #D3D3D3;
+	border-radius:2px;
+    position:relative;
+	
+}
+
+.progress h3{
+display:none;         * languages section style */
+}
+.progress:after{  
+    content:'';
+    position:absolute;       /* languages section style */
+    background:#D3D3D3;
+    top:0; 
+	bottom:0;
+    left:0; 
+    width:80%;
+}
+
+.progress1:after{
+    content:'';
+    position:absolute;
+    background:#D3D3D3;   /* languages section style */
+    top:0; 
+	bottom:0;
+    left:0; 
+    width:55%;
+}
+.progress2:after{
+    content:'';
+    position:absolute;
+    background:#D3D3D3; /* languages section style */
+    top:0; 
+	bottom:0;
+    left:0; 
+    width:30%;
+}
+
+@media screen and (max-width:1200px)and(min-width:950px) { 
+#left{
+
+height:100%;
+padding-bottom:1320px;
+
+}
+
+#right{
+height:100%;
+
+}
+}
+
+@media screen and (max-width:786px) and (min-width: 533px){ 
+
+#left{
+
+height:100%;
+padding-bottom:1280px;
+
+}
+
+#right{
+height:100%;
+
+}
+}
+
+@media screen and (max-width: 534px) { 
+#left{
+
+height:100%;
+padding-bottom:1350px;
+
+}
+
+#right{
+height:100%;
+
+}
+
+#contact{
+column-count:1;
+padding:15px 0;
+text-align:center;
+}
+#Social_media img{
+width:15%;
+height:15%;
+margin:5%;
+}
+}
+
+@media screen and (max-width: 428px) { 
+#left{
+height:100%;
+padding-bottom:1350px;
+
+}
+#right{
+height:100%;
+}
+#contact{
+column-count:1;
+padding:15px 0;
+text-align:center;
+}
+#education{
+column-count:1;
+text-align:center;
+}
+#skills{
+width:60%;
+}
+
+#circle{
+display:none
+}
+#expertise{
+display:none;
+}
+
+.progress {
+    width:100px;
+    height:10px;
+	border-radius:2px;
+    border:1px solid #BBBBBB;
+    position:relative;	
+}
+
+.progress:after {
+    content:'';
+    position:absolute;
+    background:#BBBBBB;
+    top:0; bottom:0;
+    left:0; 
+    width:80%;
+}
+#M-M{
+display:block;
+
+}
+#Social_media img{
+width:20%;
+height:20%;
+margin:5%;
+}
+
+}
+
+@media screen and (max-width: 384px) { 
+
+.dot {
+    height: 10px;
+    width: 10px;   
+}
+.dot1 {
+    height: 10px;
+    width: 10px;
+}
+
+#left{
+
+height:100%;
+padding-bottom:1640px;
+
+}
+
+#right{
+height:100%;
+}
+.progress,.progress1,.progress2 {
+    width:70px;
+    height:10px;
+	border-radius:2px;
+    border:1px solid #BBBBBB;
+    position:relative;	
+}
+#Social_media img{
+width:22%;
+height:22%;
+margin:5%;
+}
+}
+
+@media screen and (max-width: 300px) { 
+#left{
+
+height:100%;
+padding-bottom:2000px;
+
+}
+
+#right{
+height:100%;
+
+}
+#Social_media img{
+width:23%;
+height:23%;
+margin:5%;
+}
+}
+
+</style>
+</head>
+
+<!--****************************************-->
+<body>
+<div class="wrapper">
+
+<div id="left"  class="clearfix"> 
+<h1>Faridah Al-absi</h1>
+<hr><br><br>
+<span>F/A</span>
+</div>
+
+<div id="right" class="clearfix">
+<h2>Contact</h2>
+<hr>
+<div id="contact">
+<h3>Phone</h3>
+<span>771-107-888</span>
+<h3>Address</h3>
+<span>Shamlan street ,Sana'a ,Yemen</span>
+<h3>Email</h3>
+<span>faridah.absi@gmail.com</span>
+<h3>Facebook</h3>
+<span>www.facebook.com/faridah.absi</span>
+</div><br><br>
+<h2>Profile</h2>
+<!--**************************************************************************************-->
+<hr>
+<div id="profile">
+<br>
+<P>An aspiring, self-motivated website designer with a high self-management ability and ability to work under the least supervision, a good team player capable of developing websites and a fast learner capable of interacting and communicating effectively. Is currently looking for an opportunity to join an ambitious and well-developed company to gain more experience in web design.
+
+</P>
+</div><br><br>
+
+<h2>Education</h2>
+
+<!--**************************************************************************************-->
+<hr>
+<div id="education">
+<br>
+<h3>DEGREE/MAJOR</h3>
+<span>SANA'A UNIVERSITY</span>
+<h3>2011-2015</h3>
+<P>Bachelor of Engineering Faculty<br>
+ - of Information Technology - University of Sana'a.
+ </P>
+<br>
+
+</div><br><br>
+<!--**************************************************************************************-->
+
+<h2>Experience</h2>
+<hr>
+<br>
+<div>
+<br>
+<h3>HGR Project</h3>
+<span>January 2015 to April 2015</span>
+<P>Graduation project The idea of converting the language of reference to voice to serve the deaf and mute segment of the disabled with a 65% success with the ambition for a future project to develop.</P>
+<br>
+<h3>Resturante site</h3>
+<span>February 2017</span>
+<P>Site for a restaurant specializing in Italian meals.
+</P>
+<br>
+<h3>Labratory site</h3>
+<span>Mars 2018</span>
+<P>A medical lab site for tissue department to enter patient data and deliver results.
+</P>
+<br>
+<h3>Wedding site</h3>
+<span>August 2018</span>
+<P>A site specializing in flowers weddings.
+</P>
+</div>
+<!--**************************************************************************************-->
+
+<div id="SandE">
+
+<div id="skills">
+<br>
+<h2>Profissional skills:</h2>
+<hr>
+<div style="text-align:justify; margin-top:19px;">
+  <span style="display:block;">Computer skills:</span>
+  <span class="dot" style="margin-left:40px;"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot1"></span>
+</div><br>
+<div style="text-align:justify">
+  <span style="display:block;">HTML/CSS: </span>
+  <span class="dot" style="margin-left:40px;"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot1"></span>
+</div><br>
+<div style="text-align:justify">
+  <span style="display:block;">Bootstrap/JavaScript:</span>
+  <span class="dot" style="margin-left:40px;"></span>
+  <span class="dot"></span>
+  <span class="dot1"></span>
+  <span class="dot1"></span>
+</div><br>
+</div>
+<div id="expertise">
+
+<h2>Personal skills:</h2>
+<hr>
+<br>
+<div id="circle">
+  <div class="slice"></div>
+  Creativity
+</div>
+<div id="circle">
+  <div class="slice"></div>
+  curiosity
+</div>
+<div id="circle">
+  <div class="slice"></div>
+  Motivated
+
+</div>
+
+</div>
+</div><br><br>
+
+<!--**************************************************************************************-->
+
+<h2 id="M-M">Personal skills:</h2>
+
+<h3 style="background-color:#F2E2E3;">Languages:</h3>
+<br>
+Arabic  :<div class="progress"></div>
+<br>
+English :<div class="progress1"></div>
+<br>
+Spanish :<div class="progress2"></div>
+<br>
+<!--**************************************************************************************-->
+
+<h2>Social media</h2>
+<hr>
+<div id="Social_media" class="clearfix">
+<br>
+<img src="images/facebook.png"><br>
+<span>Facebook</span><br>
+
+<img src="images/instagram.png"><br>
+<span>instagram</span><br>
+<br>
+<img src="images/pinterest.png"><br>
+<span>pinterest</span><br>
+
+<img src="images/twitter.png"><br>
+<span>twitter</span><br>
+
+</div>
+
+</div>
+</body>
+</html>
